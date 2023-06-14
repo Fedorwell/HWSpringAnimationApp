@@ -96,6 +96,7 @@
                     <connections>
                         <outlet property="animationView" destination="KUW-Cw-vbH" id="7BI-yG-XCq"/>
                         <outlet property="infoLabel" destination="E9l-r8-2Jh" id="V5x-gC-ZBp"/>
+                        <outlet property="runButton" destination="67x-nt-0WM" id="0W9-EX-ZxE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

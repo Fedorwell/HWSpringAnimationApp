@@ -15,7 +15,7 @@ struct Animation {
     let force: Double
     let delay: Double
     
-    private func getSpringAnimations() -> [Animation] {
+    static func getSpringAnimations() -> [Animation] {
         var nameAnimations: [Animation] = []
         
         let springAnimations = DataStore.shared.springAnimations.shuffled()
