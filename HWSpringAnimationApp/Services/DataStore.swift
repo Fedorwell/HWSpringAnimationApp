@@ -9,7 +9,7 @@ import Foundation
 
 final class DataStore {
 
-let shared = DataStore()
+static let shared = DataStore()
 
     let springAnimations = [
            "pop",
