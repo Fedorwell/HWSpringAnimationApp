@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         presentAnimation = animation.randomElement()
         setupView(from: presentAnimation)
+        runButton.setTitle("RUN", for: .normal)
     }
     
     @IBAction func startAnimationButton(_ sender: UIButton) {
@@ -36,22 +37,17 @@ class ViewController: UIViewController {
         presentAnimation = animation.randomElement()
         sender.setTitle("Run \(presentAnimation.name)", for: .normal)
         
-        infoLabel.animation = "pop"
+        infoLabel.animation = ""
         infoLabel.animate()
     }
     
     private func setupView(from animation: Animation) {
         infoLabel.text = String(
-            format:"""
-            Present Animation: \(presentAnimation.name)
-            Curve: %@
-            Force: %.1f
-            Duration: %.1f
-            Delay: %.1f
-            """,
-            animation.force,
-            animation.duration,
-            animation.delay
+            format:" Present Animation: \(presentAnimation.name)\n Curve: %@\n Force: %.1f\n Duration: %.1f\n Delay: %.1f",
+            presentAnimation.curve,
+            presentAnimation.force,
+            presentAnimation.duration,
+            presentAnimation.delay
         )
         
         
