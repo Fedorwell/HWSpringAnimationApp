@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HWSpringAnimationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9l-r8-2Jh">
+                                <rect key="frame" x="65" y="309" width="263" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="R9g-ge-rga"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemGrayColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUW-Cw-vbH" customClass="SpringView" customModule="SpringAnimation">
+                                <rect key="frame" x="50" y="106" width="293" height="146"/>
+                                <color key="backgroundColor" red="1" green="0.41732973870000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="linear"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67x-nt-0WM">
+                                <rect key="frame" x="50" y="718" width="293" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.41732973870000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E9l-r8-2Jh" firstAttribute="top" secondItem="KUW-Cw-vbH" secondAttribute="bottom" constant="57" id="6OH-pe-Bu9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUW-Cw-vbH" secondAttribute="trailing" constant="50" id="DPw-4A-T5Y"/>
+                            <constraint firstItem="KUW-Cw-vbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="FXC-AV-TsD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E9l-r8-2Jh" secondAttribute="trailing" constant="65" id="JEl-4i-wMs"/>
+                            <constraint firstItem="E9l-r8-2Jh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="309" id="MvJ-re-UD0"/>
+                            <constraint firstItem="KUW-Cw-vbH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="Uoc-Ri-Z9F"/>
+                            <constraint firstItem="E9l-r8-2Jh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wox-Ps-5Zx"/>
+                            <constraint firstItem="67x-nt-0WM" firstAttribute="centerX" secondItem="E9l-r8-2Jh" secondAttribute="centerX" id="bkc-AC-ii7"/>
+                            <constraint firstItem="E9l-r8-2Jh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mGT-Q8-UR0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="67x-nt-0WM" secondAttribute="bottom" constant="70" id="qCx-Db-QpR"/>
+                            <constraint firstItem="67x-nt-0WM" firstAttribute="width" secondItem="KUW-Cw-vbH" secondAttribute="width" id="r7q-9b-Onh"/>
+                            <constraint firstItem="KUW-Cw-vbH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uJ0-CL-hFH"/>
+                            <constraint firstItem="E9l-r8-2Jh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="wGK-Ae-Hky"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
